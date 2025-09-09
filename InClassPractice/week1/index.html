@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+ <meta charset="UTF-8" />
+ <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <title>Index</title>
+ <link rel="stylesheet" href="css/styles.css">
+ </head>
+ <body>
+    <div>
+        <button id="my-button">Click ME!</button>
+        <h3>You have clicked <span id="click-count">0</span> times!</h3>
+    </div>
+    <script>
+        const myButton = document.getElementById("my-button");
+        const clickCountElement = document.getElementById("click-count");
+
+        let count = 0;
+
+        myButton.addEventListener("click", function(){
+            count++;
+            clickCountElement.textContent = count;
+            console.log("Button clicked.")
+        })
+
+    </script>
+ </body>
+</html>
