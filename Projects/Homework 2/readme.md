@@ -1,2 +1,2 @@
-Homework 2
-Javascript is in js/scripts.js
+Homework 2\n
+Javascript is in Homework 2/js/scripts.js
