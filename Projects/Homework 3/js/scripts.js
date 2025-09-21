@@ -22,7 +22,7 @@ function btnClick(){ //Called by the button
     if(isNaN(interest)){ //missing field
         output.textContent = "Error: Missing Field. Make sure all fields are filled in and remove any letters or characters.";
     }else{
-        output.textContent = `With a beginning principal of $${principle} and with a growth rate of ${rate}% for ${time} years, your total intrest will be $${interest} with a grand total of $${total}`;
+        output.textContent = `With a beginning principal of $${principle} and with a growth rate of ${rate}% for ${time} years, your total intrest will be $${interest} with a grand total of $${total}.`;
     }
 }
 
