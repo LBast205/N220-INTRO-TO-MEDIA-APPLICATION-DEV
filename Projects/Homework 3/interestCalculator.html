@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interest Calculator</title>
+    <link rel="stylesheet" href="css/styles.css">
+    
+ </head>
+ <body>
+    <h1>Interest Calculator</h1>
+    <div class="container">
+        <div class="calculator">
+                <form id="calcForm">
+                    <label for="principle">Principle</label>
+                    <input type="number" id="principle">
+                    <br>
+                    <label for="rate">Interest Rate</label>
+                    <input type="number" id="rate">
+                    <br>
+                    <label for="time">Time</label>
+                    <input type="number" id="time">
+                    <br>
+                    <input type="button" value="Calculate" class="btn" id="calculate" onclick="btnClick()">
+                </form> 
+        </div>
+        <div class="results">
+            <h2>Your Results</h2>
+            <p class="output" id="output"></p>
+        </div>
+    </div>
+    <script src="js/scripts.js" defer></script>
+ </body>
+</html>
