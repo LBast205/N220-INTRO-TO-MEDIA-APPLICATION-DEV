@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Week 5 Lab - Arrays, Objects, and Loops (Template)</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; background: #f7f7f7; }
+        h1 { color: darkblue; }
+        .question { margin-bottom: 20px; padding: 15px; border: 1px solid #ccc; border-radius: 8px; background: #fff; }
+        .answer { color: green; font-weight: bold; margin-top: 5px; }
+        h3 { margin: 0 0 5px 0; }
+    </style>
+</head>
+<body>
+    <h1>Week 5 Lab - Arrays, Objects, and Loops (Template)</h1>
+    <p>Complete the following exercises by filling in the logic in the solutions section. The answers will appear below each question when you write your code.</p>
+    
+
+
+    <!-- Question 0 --> 
+     <div class="question"> 
+        <h3>Q0: Example - Print the first element of [10, 20, 30, 40]</h3> 
+        <p class="answer" id="ans0"></p>
+    </div>
+
+    <!-- Question 1 -->
+    <div class="question">
+        <h3>Q1: A bakery has cakes with prices [15, 25, 10, 30]. Print the first and last price.</h3>
+        <p class="answer" id="ans1"></p>
+    </div>
+
+    <!-- Question 2 -->
+    <div class="question">
+        <h3>Q2: Add a new fruit "Strawberry" at the end of ["Apple", "Orange", "Banana"] using a method.</h3>
+        <p class="answer" id="ans2"></p>
+    </div>
+
+    <!-- Question 3 -->
+    <div class="question">
+        <h3>Q3: A game has a stack of cards ["Ace", "King", "Queen"]. Remove the top card and print it.</h3>
+        <p class="answer" id="ans3"></p>
+    </div>
+
+    <!-- Question 4 -->
+    <div class="question">
+        <h3>Q4: Add a new hero "Wonder Woman" to the beginning of ["Spider-Man", "Iron Man"]. Print the new list.</h3>
+        <p class="answer" id="ans4"></p>
+    </div>
+
+    <!-- Question 5 -->
+    <div class="question">
+        <h3>Q5: From the array [100, 200, 300, 400], remove the first two elements using a method and print the removed elements.</h3>
+        <p class="answer" id="ans5"></p>
+    </div>
+
+    <!-- Question 6 -->
+    <div class="question">
+        <h3>Q6: A zoo has animals arranged in a 2D array: [["Lion","Tiger"],["Elephant","Giraffe"]]. Print the animal at row 1, column 0.</h3>
+        <p class="answer" id="ans6"></p>
+    </div>
+
+    <!-- Question 7 -->
+    <div class="question">
+        <h3>Q7: A 3D array represents a layered chocolate box: [[["Dark","Milk"],["White","Hazelnut"]],[["Caramel","Nut"],["Fruit","Mint"]]]. Print the element at layer 0, row 1, column 0.</h3>
+        <p class="answer" id="ans7"></p>
+    </div>
+
+    <!-- Question 8 -->
+    <div class="question">
+        <h3>Q8: A player object: {name: "Alex", score: 70, level: 3}. Increase the score by 10 and print the new score.</h3>
+        <p class="answer" id="ans8"></p>
+    </div>
+
+    <!-- Question 9 -->
+    <div class="question">
+        <h3>Q9: Loop through [1,2,3,4,5] and print only the numbers greater than 3.</h3>
+        <p class="answer" id="ans9"></p>
+    </div>
+
+    <!-- Question 10 -->
+    <div class="question">
+        <h3>Q10: Check a day variable (1-7) using switch. Print the day name (1=Sunday, 2=Monday, ..., default="Unknown day"). Use day = 5.</h3>
+        <p class="answer" id="ans10"></p>
+    </div>
+
+    <script>
+        /********************
+         * SOLUTIONS 
+         * Students: Fill in the logic where indicated.
+         * Do not change the document.getElementById line.
+         ********************/
+        //Q0 Example 
+        let exampleArray = [10, 20, 30, 40]; 
+        
+        document.getElementById("ans0").innerHTML = exampleArray[0];
+
+
+
+
+        // // Q1: Print first and last elements of the array
+        // let cakePrices = [15, 25, 10, 30];
+        // // TODO: Fill in the code to get the first and last element
+        // // Hint: First element is at index 0, last element is at index length-1
+        // document.getElementById("ans1").innerHTML = /* YOUR Ans */;
+
+        // // Q2: Add a new fruit at the end
+        // let fruits = ["Apple", "Orange", "Banana"];
+        // // TODO: Use a method to add "Strawberry" at the end
+        // document.getElementById("ans2").innerHTML = /* YOUR Ans */;
+
+        // // Q3: Remove the top card from a stack
+        // let cards = ["Ace", "King", "Queen"];
+        // // TODO: Remove last element using a method and print it
+        // document.getElementById("ans3").innerHTML = /* YOUR Ans */;
+
+        // // Q4: Add a hero to the beginning
+        // let heroes = ["Spider-Man", "Iron Man"];
+        // // TODO: Use a method to add "Wonder Woman" at the start
+        // document.getElementById("ans4").innerHTML = /* YOUR Ans */;
+
+        // // Q5: Remove first two elements and print them
+        // let numbers = [100, 200, 300, 400];
+        // // TODO: Use a method to remove first two elements and show removed ones
+        // document.getElementById("ans5").innerHTML = /* YOUR Ans */;
+
+        // // Q6: Access element in a 2D array
+        // let zoo = [["Lion","Tiger"],["Elephant","Giraffe"]];
+        // // TODO: Access the element at row 1, column 0
+        // document.getElementById("ans6").innerHTML = /* YOUR Ans */;
+
+        // // Q7: Access element in a 3D array
+        // let chocolateBox = [[["Dark","Milk"],["White","Hazelnut"]],[["Caramel","Nut"],["Fruit","Mint"]]];
+        // // TODO: Access layer 0, row 1, column 0
+        // document.getElementById("ans7").innerHTML = /* YOUR Ans */;
+
+        // // Q8: Update object property
+        // let player = {name: "Alex", score: 70, level: 3};
+        // // TODO: Increase score by 10 and print new score
+        // document.getElementById("ans8").innerHTML = /* YOUR Ans */;
+
+        // // Q9: Loop and filter numbers greater than 3
+        // let nums = [1,2,3,4,5];
+        // // TODO: Loop through the array, select numbers > 3, and print them
+        // document.getElementById("ans9").innerHTML = /* YOUR Ans */;
+
+        // // Q10: Use switch to print day name
+        // let day = 5;
+        // // TODO: Write a switch statement to print the correct day name
+        // document.getElementById("ans10").innerHTML = /* YOUR Ans */;
+
+    </script>
+</body>
+</html>
