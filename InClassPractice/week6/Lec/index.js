@@ -16,7 +16,7 @@
 /********************************************************************
  * 2. 1D ARRAYS
  ********************************************************************/
-
+console.log("--------1d Arrays--------");
  
 // Array of integers
 let numbers = [10, 20, 30, 40, 50];
@@ -63,6 +63,8 @@ console.log("Last element of fruits:", fruits[fruits.length - 1]); // Orange
 /* =========================================================================
    LENGTH - find how many items are inside the array
    ========================================================================= */
+console.log("--------Length--------");
+
 let numbers_for_length = [10, 20, 30, 40, 50];
 
  
@@ -125,6 +127,8 @@ If you increase length = 7, you add two more chairs, but they are empty. So the 
 /* =========================================================================
    PUSH - add an item to the end of the array
    ========================================================================= */
+console.log("--------Push--------");
+
 let numbers_push_example = [10, 20, 30, 40, 50];
 
  
@@ -159,6 +163,8 @@ console.log("push returned (new length):", pushReturnValue);
 /* =========================================================================
    POP - remove the LAST item of the array
    ========================================================================= */
+console.log("--------Pop--------");
+
 let numbers_pop_example = [10, 20, 30, 40, 50];
 
  
@@ -197,6 +203,8 @@ console.log("Value removed by pop:", poppedValue);
 /* =========================================================================
    UNSHIFT - add an item to the BEGINNING of the array
    ========================================================================= */
+console.log("--------Unshift--------");
+
 let numbers_unshift_example = [10, 20, 30, 40, 50];
 
  
@@ -235,6 +243,8 @@ console.log("unshift returned (new length):", unshiftReturnValue);
 /* =========================================================================
    SHIFT - remove the FIRST item from the array
    ========================================================================= */
+console.log("--------Shift--------");
+
 let numbers_shift_example = [10, 20, 30, 40, 50];
 
  
@@ -271,6 +281,8 @@ console.log("Value removed by shift:", shiftedValue);
 /* =========================================================================
    SLICE - copy PART of an array (without changing the original)
    ========================================================================= */
+console.log("--------Slice--------");
+
 let numbers_slice_example = [10, 20, 30, 40, 50];
 
  
@@ -306,6 +318,8 @@ console.log("Original array after slice():", numbers_slice_example);
 /* =========================================================================
    SPLICE - add, remove, or replace items in the middle of an array
    ========================================================================= */
+console.log("--------Splice--------");
+
 let numbers_splice_example = [10, 20, 30, 40, 50];
 
  
@@ -347,6 +361,7 @@ console.log("Items removed by splice:", removedItems);
 /* =========================================================================
    INDEXOF & INCLUDES - searching inside arrays
    ========================================================================= */
+console.log("--------INDEXOF--------");
 let numbers_search_example = [10, 20, 30, 40, 50];
 
  
@@ -389,6 +404,7 @@ console.log("Does the array include 99?", numbers_search_example.includes(99));
 /* =========================================================================
    SORT & REVERSE - arranging and flipping arrays
    ========================================================================= */
+console.log("--------Sort--------");
 let arrSort_example = [5, 2, 9, 1, 7];
 
  
@@ -439,6 +455,7 @@ console.log("Reversed numeric sort:", reversed);
 /* =========================================================================
    JOIN & CONCAT - combining items into text or new arrays
    ========================================================================= */
+console.log("--------Join/Concat--------");
 let fruits_for_join = ["Apple", "Banana", "Mango", "Orange"];
 
  
@@ -481,6 +498,7 @@ console.log("Concatenated array:", concatenated);
 /********************************************************************
  * 4. 2D ARRAYS (ARRAY OF ARRAYS)
  ********************************************************************/
+console.log("--------2d Arrays--------");
 let matrix2D = [
   [1, 2, 3],
   [4, 5, 6]
@@ -518,6 +536,8 @@ console.log("Element at row 1, col 2:", matrix2D[1][2]); // 6
 /********************************************************************
  * 5. 3D ARRAYS (ARRAY OF ARRAYS OF ARRAYS)
  ********************************************************************/
+console.log("--------3d Arrays--------");
+
 let matrix3D = [
   [
     [1, 2], [3, 4]
@@ -557,7 +577,7 @@ console.log("Access element [1][0][1]:", matrix3D[1][0][1]); // 6
 /********************************************************************
  * WEEK 6 - Objects
  ********************************************************************/
-
+console.log("--------Objects--------");
 
 let person = {
     name: "Alex",
@@ -595,8 +615,125 @@ console.log("Updated age: ",studentObj1.age);
 studentObj1.grade ="A+++";
 console.log("Added new property - grade: ",studentObj1.grade);
 
+//Delete Property
+delete studentObj1.isEnrolled;
+console.log("Deleted isEnrolled Property: ",studentObj1);
+
+//Nested Object
+let classroomObj1 = {
+    roomnumber: 252,
+    students:{
+        student1: { name: "abcd", age:45},
+        student2: { name: "abcd1", age:65}
+    }
+
+}
+
+console.log("classroom details: ",classroomObj1);
+console.log("Student details: ",classroomObj1.students);
+console.log("Student1 details: ",classroomObj1.students.student1);
+console.log("Student2 age: ", classroomObj1.students.student2.age);
+
+//Loops
+console.log("--------For Loop--------");
+
+for (let i=0; i < 10; i++) {
+    console.log("iteration: ",i);
+    
+}
+
+console.log("For Loop 2");
+
+//Adding in loops
+let total = 0;
+
+for (let i = 0; i < 10; i++) {
+    total += i;
+    console.log("iteration: ",total);
+}
+
+//Nested loops
+for (let i = 1; i <= 10; i++) {
+    for (let j = 1; j <= 10; j++){
+        console.log(i,"*",j,"=",i*j)
+    }
+    console.log("--End Of Inner Loop--");
+    
+}
 
 
+//While Loop
+console.log("--------While Loop--------");
+
+let k =1;
+while (k < 3) {
+    console.log("While loop Iteration: ",k);
+    k++;
+}
+
+let l = 10;
+
+while (l%10 == 0 && l <= 100) {
+    console.log("iteration in while loop 2: ",l);
+    l+=10
+}
+
+
+console.log("--------Do While Loop--------");
+
+let m=0;
+do{
+    console.log("iteration in do while loop: ",m);
+    m++;
+}while(m<10);
+
+
+//Conditional statements
+console.log("--------Conditional statements--------");
+
+//if-else
+let score = 80;
+if(score >=90){
+    console.log("A");
+}else if(score >=80){
+    console.log("B");
+}else if(score >=70){
+    console.log("C");
+}else if(score >=60){
+    console.log("D");
+}else{
+    console.log("F");
+}   
+
+console.log("--------Switch statements--------");
+let day =3;
+
+switch (day) {
+    case 1:
+        console.log("Monday");
+        break;
+    case 2:
+        console.log("Tuesday");
+        break;
+    case 3:
+        console.log("Wednesday");
+        break;
+    case 4:
+        console.log("Thursday");
+        break;
+    case 5:
+        console.log("Friday");
+        break;
+    case 6:
+        console.log("Saturday");
+        break;
+    case 7:
+        console.log("Sunday");
+        break;
+    default:
+        console.log("Not a day of the week!");
+        break;
+}
 
 
 
