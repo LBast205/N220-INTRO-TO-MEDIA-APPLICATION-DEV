@@ -1,0 +1,39 @@
+* {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+html, body {
+ height: 100%
+}
+h1, h2, h3, h4, h5, h6, p {
+ margin-bottom: 16px
+}
+
+body{
+    background-image: url('../images/fall.jpg');
+    background: rgb(164, 150, 148);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;  
+}
+
+.container{
+    background-color: #EDE7D9;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 100%;
+    max-width: 500px;
+    color: #4B4237;
+}
+
+h1{
+    color: #4B4237;
+}
+
+
+
+

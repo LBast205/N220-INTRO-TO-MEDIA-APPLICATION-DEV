@@ -1,0 +1,166 @@
+* {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+html, body {
+ height: 100%
+}
+h1, h2, h3, h4, h5, h6, p {
+ margin-bottom: 16px
+}
+
+body{
+    background-image: url('../images/fall.jpg');
+    background: rgb(164, 150, 148);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;  
+}
+
+.container{
+    background-color: #EDE7D9;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 100%;
+    max-width: 500px;
+    color: #4B4237;
+}
+
+h1{
+    color: #4B4237;
+}
+
+.form{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column; 
+}
+
+
+label {
+    display: block;
+    margin-bottom: 1px;
+    font-weight: 650;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: 6px;
+    font-size: 1em;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus,
+select:focus {
+    border-color: #D5A021;
+    outline: none;
+}
+
+.form-group.checkbox {
+    display: flex;
+    align-items: center;
+    gap: 8px;   
+}
+
+.form-group .gender{
+    font-weight: normal;
+}
+
+.form-group.checkbox label {
+    margin-bottom: 0;
+}
+
+input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+.form-group:has(input[type="radio"]) {
+    font-weight: lighter;
+    gap: 15px;
+}
+
+.form-group:has(input[type="radio"]) > label:first-child {
+    width: 100%;
+}
+
+input[type="radio"] {
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+
+select {
+    background-color: white;
+    cursor: pointer;
+}
+
+#submit{
+    width: 100%;
+    padding: 8px;
+    background-color: #D5A021;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#submit:hover {
+    background-color: #ddb455;
+}
+    
+#message{
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 6px;
+    text-align: center;
+    display: none;
+}
+
+#message.success{
+    color: #14a412ff;
+    display: block;
+}
+#message.error{
+    color: #ff6262ff;
+    display: block;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+    .container {
+        padding: 20px;
+    }
+   
+    h1 {
+        font-size: 1.5em;
+    }
+   
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="number"],
+    select,
+    button[type="submit"] {
+        padding: 10px;
+    }
+}
+
+

@@ -1,0 +1,54 @@
+
+/* Basic styling to make the page look nice for classroom demo */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #f2f2f2;
+  margin: 0;
+  padding: 40px;
+}
+
+h1 {
+  color: #333;
+}
+
+p {
+  color: #555;
+  font-size: 1.1em;
+}
+
+.buttons {
+  margin-top: 30px;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  margin: 10px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.output-box {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 2px 8px rgba(0,0,0,0.1);
+  margin-top: 40px;
+  padding: 30px;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#output {
+  font-size: 1.2em;
+  color: #444;
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+ <meta charset="UTF-8" />
+ <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <title>Form Interaction Demo</title>
+ <link rel="stylesheet" href="css/styles.css">
+ </head>
+ <body>
+    <div class="container">
+        <div class="form">
+            <h1>User Registration</h1>
+            <form id="userForm" action="">
+                <!-- Name -->
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" placeholder="Enter your full name..." >
+                </div>
+
+                <!-- Email -->
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Enter your email..." >
+                </div>
+
+                <!-- Password -->
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Enter your password..." >
+                </div>
+
+                <!-- Age -->
+                <div class="form-group">
+                    <label for="age">Age</label>
+                    <input type="number" id="age" min="1" max="120" placeholder="Enter your age...">
+                </div>
+
+                <!-- Gender -->
+                <div class="form-group">
+                    <label for="gender">Gender: </label>
+                    <label class="gender"><input type="radio" name="gender" value="Male"> Male  </label>
+                    <label class="gender"><input type="radio" name="gender" value="Female"> Female  </label>
+                    <label class="gender"><input type="radio" name="gender" value="Other"> Other  </label>
+                    <label class="gender"><input type="radio" name="gender" value="Prefer Not To Say"> Prefer not to say  </label>
+                </div>
+
+                <!-- Country -->
+                <div class="form-group">
+                    <label for="country">Country: </label>
+                    <select id="country" required>
+                        <option value="USA">USA</option>
+                        <option value="India">India</option>
+                        <option value="UK">UK</option>
+                        <option value="Australia">Australia</option>
+                        <option value="Canada">Canada</option>
+                    </select>
+                </div>
+
+                <!-- Terms -->
+                <div class="form-group checkbox">
+                    <label>
+                        <input type="checkbox" id="terms"> I agree to the terms and conditions
+                    </label>
+                </div>
+
+                <!-- Submit -->
+                <button id="submit">submit</button>
+            </form>
+        <div id="message"></div>
+        </div>
+    </div>
+    <script src="script1.js"></script>
+
+ </body>
+</html>
