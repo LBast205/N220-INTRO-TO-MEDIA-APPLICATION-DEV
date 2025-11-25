@@ -18,9 +18,26 @@ adviceBtn.addEventListener("click", async() =>{
         const response = await fetch(url);
         const data = await response.json();
         const adviceText = data.slip.advice;
-        output.textContent = adviceText;
+        output.textContent = `${adviceText}`;
 
     } catch(error){
-        output.textContent = `An error occured: ${error.message}`
+        output.textContent = `An error occured: ${error.message}`;
     }
-})
+});
+
+catBtn.addEventListener("click", async() =>{
+    const url = "https://catfact.ninja/fact";
+    
+    output.textContent = "Fetching a cat fact for you...";
+
+    try{
+        const response = await fetch(url);
+        const data = await response.json();
+        const catText = data.fact;
+        output.textContent = `${catText}`;
+
+    } catch(error){
+        output.textContent = `An error occured: ${error.message}`;
+    }
+});
+
