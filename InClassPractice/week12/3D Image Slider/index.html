@@ -1,0 +1,152 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Image Slider</title>
+    <style>
+        body {
+            margin: 0;
+            background: #111;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: sans-serif;
+            overflow: hidden;
+        }
+
+        /* The Scene: Needs perspective to create depth */
+        .scene {
+            width: 260px;
+            height: 360px;
+            perspective: 1000px; /* Determines how "deep" the 3D space looks */
+        }
+
+        /* The Carousel: Holds the items and rotates */
+        .carousel {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            transform-style: preserve-3d; /* Vital: Allows children to exist in 3D space */
+            transition: transform 1s ease-in-out; /* Smooth rotation */
+        }
+
+        /* The Cards (Images) */
+        .carousel__cell {
+            position: absolute;
+            width: 240px;
+            height: 340px;
+            left: 10px;
+            top: 10px;
+            border-radius: 15px;
+            overflow: hidden;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            /* Nice reflection effect */
+            -webkit-box-reflect: below 10px linear-gradient(transparent, rgba(0,0,0,0.3));
+        }
+
+        .carousel__cell img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Navigation Buttons */
+        .controls {
+            position: absolute;
+            bottom: 50px;
+            display: flex;
+            gap: 20px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            background: white;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #00d2ff;
+            color: white;
+            box-shadow: 0 0 15px #00d2ff;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="scene">
+        <div class="carousel">
+            <div class="carousel__cell"><img src="https://picsum.photos/300/400?random=1" alt="Image 1"></div>
+            <div class="carousel__cell"><img src="https://picsum.photos/300/400?random=2" alt="Image 2"></div>
+            <div class="carousel__cell"><img src="https://picsum.photos/300/400?random=3" alt="Image 3"></div>
+            <div class="carousel__cell"><img src="https://picsum.photos/300/400?random=4" alt="Image 4"></div>
+            <div class="carousel__cell"><img src="https://picsum.photos/300/400?random=5" alt="Image 5"></div>
+            <div class="carousel__cell"><img src="https://picsum.photos/300/400?random=6" alt="Image 6"></div>
+        </div>
+    </div>
+
+    <div class="controls">
+        <button class="btn" id="prev">Previous</button>
+        <button class="btn" id="next">Next</button>
+    </div>
+
+    <script>
+    //Javascript for carousel rotation
+        //First locate the carousel div element for use in moverment/rotation
+        const carousel = document.querySelector(".carousel");
+        const cells = document.querySelectorAll(".carousel__cell");
+
+        //Get the number of cells to determine the amount of rotation needed.
+        const cellCount = cells.length;
+        let selectedIndex = 0;
+
+    //Math... woooooohhh...
+        const theta = 360/cellCount;
+        const cellWidth = carousel.offsetWidth; //offsetWidth gives width of screen, width of carousel
+        const radius = Math.round((cellWidth/2)/Math.tan(Math.PI/cellCount)); //Formula for circle radius
+
+        //function for rotating the carousel
+        function rotateCarousel(){
+            //Calculate the angle for rotation
+            const angle = theta * selectedIndex * (-1);
+            carousel.style.transform = 
+                "translateZ("+ -radius + "px)"//pushes the carousel away along the Z-axis, pushes it back by the value of radius
+                +"rotateY("+ angle + "deg)";//rotates the carousel around the Y-axis by the angle value
+        }
+
+        //Position each item
+        for (let i=0; i<cellCount; i++){
+            const cell = cells[i];
+            if(i < cellCount){
+                const cellAngle = theta *i;
+                cell.style.transform = 
+                    "rotateY("+ cellAngle + "deg)"
+                    +"translateZ("+ radius + "px)";
+            }
+        }
+
+        //Call rotate function once for setup
+        rotateCarousel();
+
+        document.getElementById("prev").addEventListener("click",()=>{
+            selectedIndex--;
+            rotateCarousel();
+        })
+
+        document.getElementById("next").addEventListener("click",()=>{
+            selectedIndex++;
+            rotateCarousel();
+        })
+            
+           
+
+    </script>
+</body>
+</html>
